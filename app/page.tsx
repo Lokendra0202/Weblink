@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import HeroSlider from '@/components/HeroSlider'
+import Career from '@/components/Career'
 
 const About = dynamic(() => import('@/components/About'))
 const Services = dynamic(() => import('@/components/Services'))
@@ -18,7 +20,7 @@ export default function HomePage() {
         <Navbar />
       </header>
       <main id="main-content">
-        <Hero />
+        <HeroSlider />
         <ScrollReveal>
           <About />
         </ScrollReveal>
@@ -27,6 +29,9 @@ export default function HomePage() {
         </ScrollReveal>
         <ScrollReveal>
           <WhyChooseUs />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Career />
         </ScrollReveal>
         <ScrollReveal>
           <Testimonials />
