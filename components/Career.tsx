@@ -4,79 +4,90 @@ import {
   Users,
   TrendingUp,
   Briefcase,
-  HeartHandshake
-} from 'lucide-react'
+  HeartHandshake,
+} from "lucide-react";
 
 const benefits = [
   {
-    title: 'Real Project Experience',
+    title: "Real Project Experience",
     description:
-      'Work on live client projects from day one and gain practical industry exposure beyond theory.',
-    Icon: Briefcase
+      "Work on live client projects from day one and gain practical industry exposure beyond theory.",
+    Icon: Briefcase,
   },
   {
-    title: 'Skill Development',
+    title: "Skill Development",
     description:
-      'Continuously improve your technical and professional skills through mentorship and hands-on learning.',
-    Icon: GraduationCap
+      "Continuously improve your technical and professional skills through mentorship and hands-on learning.",
+    Icon: GraduationCap,
   },
   {
-    title: 'Fast Career Growth',
+    title: "Fast Career Growth",
     description:
-      'Performance-driven environment that rewards initiative, learning, and leadership potential.',
-    Icon: TrendingUp
+      "Performance-driven environment that rewards initiative, learning, and leadership potential.",
+    Icon: TrendingUp,
   },
   {
-    title: 'Innovative Work Culture',
+    title: "Innovative Work Culture",
     description:
-      'Collaborate with a supportive team that encourages creativity and experimentation.',
-    Icon: Users
+      "Collaborate with a supportive team that encourages creativity and experimentation.",
+    Icon: Users,
   },
   {
-    title: 'Launch Your Career',
+    title: "Launch Your Career",
     description:
-      'Perfect place for freshers and professionals to kick-start their journey in development and digital solutions.',
-    Icon: Rocket
+      "Perfect place for freshers and professionals to kick-start their journey in development and digital solutions.",
+    Icon: Rocket,
   },
   {
-    title: 'Supportive Environment',
+    title: "Supportive Environment",
     description:
-      'Friendly workplace focused on teamwork, knowledge sharing, and long-term success.',
-    Icon: HeartHandshake
-  }
-]
+      "Friendly workplace focused on teamwork, knowledge sharing, and long-term success.",
+    Icon: HeartHandshake,
+  },
+];
 
 export default function Career() {
   return (
     <section className="relative py-24 bg-gradient-to-b from-white via-sky-50 to-white overflow-hidden">
-
       {/* decorative blobs */}
       <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyan-200/40 blur-3xl" />
       <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-fuchsia-200/40 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-8 md:grid-cols-2">
+          {/* LEFT TEXT */}
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600">
+              Careers
+            </p>
 
-        {/* Heading */}
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600">
-            Careers
-          </p>
-          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
-            Build Skills. Gain Experience. Grow Faster.
-          </h2>
-          <p className="mt-4 text-slate-600">
-            We help passionate people transform their potential into real-world expertise
-            through mentorship, collaboration, and meaningful projects.
-          </p>
+            <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+              Build Skills. Gain Experience. Grow Faster.
+            </h2>
+
+            <p className="mt-4 text-slate-600">
+              We help passionate people transform their potential into
+              real-world expertise through mentorship, collaboration, and
+              meaningful projects.
+            </p>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src="/career-image.png" 
+              alt="Careers illustration"
+              className="w-full max-w-sm md:max-w-md object-contain"
+            />
+          </div>
         </div>
 
         {/* Cards grid */}
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
           {benefits.map(({ title, description, Icon }) => (
             <div
               key={title}
-              className="relative rounded-2xl bg-white p-7 shadow-lg shadow-slate-200/60 transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="relative rounded-2xl bg-white p-7 shadow-xl shadow-slate-400/30 transition duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
               {/* left accent line */}
               <span className="absolute left-0 top-6 h-10 w-1 rounded-r bg-gradient-to-b from-cyan-500 to-blue-500" />
@@ -86,16 +97,13 @@ export default function Career() {
                 <Icon className="h-6 w-6 text-cyan-700" />
               </div>
 
-              <h3 className="text-lg font-semibold text-slate-900">
-                {title}
-              </h3>
+              <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
 
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 {description}
               </p>
             </div>
           ))}
-
         </div>
 
         {/* Bottom CTA panel */}
@@ -114,8 +122,7 @@ export default function Career() {
             View Open Positions
           </a>
         </div>
-
       </div>
     </section>
-  )
+  );
 }
