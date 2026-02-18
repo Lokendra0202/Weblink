@@ -1,16 +1,20 @@
-import ImageWithSkeleton from '@/components/ImageWithSkeleton'
+import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 
 const heroStats = [
-  { value: '200+', label: 'Businesses' },
-  { value: '98%', label: 'Client Satisfaction' },
-  { value: '24/7', label: 'Support Coverage' }
-]
+  { value: "200+", label: "Businesses" },
+  { value: "98%", label: "Client Satisfaction" },
+  { value: "24/7", label: "Support Coverage" },
+];
 
-const particles = Array.from({ length: 14 }, (_, i) => i)
+const particles = Array.from({ length: 14 }, (_, i) => i);
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-28 sm:pt-32" aria-label="Hero">
+    <section
+      id="home"
+      className="relative overflow-hidden pt-28 sm:pt-32"
+      aria-label="Hero"
+    >
       <div className="absolute inset-0 -z-20 bg-[length:200%_200%] bg-gradient-to-br from-brand-indigo/18 via-white/30 to-brand-sky/18 animate-gradient-shift" />
       <div className="absolute inset-0 -z-10 grid-backdrop opacity-35" />
       <div className="absolute -left-16 top-20 h-56 w-56 rounded-full bg-brand-purple/25 blur-3xl" />
@@ -27,7 +31,7 @@ export default function Hero() {
             style={{
               left: `${(item * 13) % 100}%`,
               top: `${(item * 19) % 90}%`,
-              animationDelay: `${(item % 6) * 0.35}s`
+              animationDelay: `${(item % 6) * 0.35}s`,
             }}
           />
         ))}
@@ -42,15 +46,21 @@ export default function Hero() {
             Transforming Ideas into Powerful Digital Solutions
           </h1>
           <p className="hero-description mt-6 max-w-xl text-base leading-relaxed text-slate-700 sm:text-lg">
-            WebLink Services Pvt Ltd (WLSPL) blends engineering, design, and growth marketing to turn ambitious ideas into
-            high-converting digital experiences.
+            WebLink Services Pvt Ltd (WLSPL) blends engineering, design, and
+            growth marketing to turn ambitious ideas into high-converting
+            digital experiences.
           </p>
 
           <div className="mt-8 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
             {heroStats.map((item) => (
-              <div key={item.label} className="glass-surface rounded-2xl px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-sky/25 hover:shadow-soft">
+              <div
+                key={item.label}
+                className="glass-surface rounded-2xl px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-sky/25 hover:shadow-soft"
+              >
                 <p className="text-lg font-bold text-slate-900">{item.value}</p>
-                <p className="text-xs uppercase tracking-wide text-slate-600">{item.label}</p>
+                <p className="text-xs uppercase tracking-wide text-slate-600">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
@@ -76,28 +86,35 @@ export default function Hero() {
         <div className="relative">
           <div className="absolute -right-4 -top-4 h-28 w-28 rounded-full bg-gradient-to-r from-brand-indigo to-brand-purple opacity-30 blur-2xl" />
           <div className="absolute right-3 top-8 h-3 w-3 animate-pulse rounded-full bg-brand-cyan" />
-          <div className="parallax-card animate-float rounded-3xl border border-white/70 bg-white/75 p-4 shadow-soft backdrop-blur-md">
-            <ImageWithSkeleton
-              src="/hero-visual.svg"
-              alt="Modern digital solutions dashboard illustration"
-              width={600}
-              height={450}
-              priority
-              containerClassName="rounded-2xl"
-              className="h-auto w-full rounded-2xl"
+          <div className="parallax-card animate-float relative mx-auto max-w-md rounded-3xl border border-white/70 bg-white/75 p-4 shadow-soft backdrop-blur-md">
+            <video
+              src="/about-video-1.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full rounded-2xl object-cover"
             />
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brand-indigo/10 via-transparent to-brand-sky/10" aria-hidden="true" />
+
+            <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-tr from-brand-indigo/10 via-transparent to-brand-sky/10" />
           </div>
+
           <div className="absolute -bottom-5 -left-5 glass-surface rounded-2xl px-4 py-3 shadow-soft">
-            <p className="text-xs uppercase tracking-wide text-slate-500">Growth Focused</p>
-            <p className="text-sm font-semibold text-slate-900">Strategy + Execution + Results</p>
+            <p className="text-xs uppercase tracking-wide text-slate-500">
+              Growth Focused
+            </p>
+            <p className="text-sm font-semibold text-slate-900">
+              Strategy + Execution + Results
+            </p>
           </div>
           <div className="absolute -right-2 bottom-20 glass-surface rounded-2xl px-4 py-2 shadow-soft">
-            <p className="text-xs uppercase tracking-wide text-slate-500">Avg Delivery</p>
+            <p className="text-xs uppercase tracking-wide text-slate-500">
+              Avg Delivery
+            </p>
             <p className="text-sm font-semibold text-slate-900">2.4x Faster</p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

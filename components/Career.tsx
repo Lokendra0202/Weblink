@@ -75,7 +75,7 @@ export default function Career() {
           {/* RIGHT IMAGE */}
           <div className="flex justify-center md:justify-end">
             <img
-              src="/career-image.png" 
+              src="/career-img.png" 
               alt="Careers illustration"
               className="w-full max-w-sm md:max-w-md object-contain"
             />

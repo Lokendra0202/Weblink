@@ -180,15 +180,7 @@ export default function About() {
             shadow-xl dark:shadow-none
           "
         >
-          <ImageWithSkeleton
-            src="/about-illustration.svg"
-            alt="Team collaborating on web and software projects"
-            width={640}
-            height={480}
-            containerClassName="rounded-xl sm:rounded-2xl"
-            className="h-auto w-full rounded-xl sm:rounded-2xl"
-          />
-
+          <img src="/about-img.jpg" className="w-full rounded-2xl" />
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-indigo-500/10 via-transparent to-cyan-400/10" />
 
           {/* responsive floating badge */}

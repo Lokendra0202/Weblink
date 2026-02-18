@@ -35,12 +35,12 @@ export default function HeroSlider() {
               playsInline
               className="absolute inset-0 h-full w-full object-cover"
             >
-              <source src="/hero-video.mp4" type="video/mp4" />
+              <source src="/banner-video.mp4" type="video/mp4" />
             </video>
 
-            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0" />
 
-            <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
+            {/* <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-6">
               <h1 className="text-4xl sm:text-6xl font-black">
                 Building Digital Experiences That Grow Businesses
               </h1>
@@ -55,7 +55,7 @@ export default function HeroSlider() {
               >
                 Contact Now
               </a>
-            </div>
+            </div> */}
 
           </div>
         </SwiperSlide>
